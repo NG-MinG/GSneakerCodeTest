@@ -1,0 +1,94 @@
+.container {
+    margin: 8rem 0rem;
+}
+
+.container:first-child {
+    margin-top: 0rem;
+}
+
+.container:last-child {
+    margin-bottom: 4rem;
+}
+
+.image {
+    border-radius: 3rem;
+    height: 38rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image > img {
+    display: block;
+    width: 100%;
+    -webkit-filter: drop-shadow(0 3rem 2rem rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 3rem 2rem rgba(0, 0, 0, 0.2));
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+    margin-left: -1.6rem;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2.6rem 0 2rem;
+    line-height: 1.5;
+}
+
+.description {
+    font-size: 1.3rem;
+    color: var(--text-secondary-color);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    height: 4.6rem;
+    min-width: 4.6rem;
+    padding: 1.6rem 2rem;
+    border-radius: 10rem;
+    transition: width min-width 0.25s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    border: none;
+    color: var(--text-primary-color);
+    align-items: center;
+    overflow: hidden;
+}
+
+.button:hover {
+    background-color: var(--primary-color-hover);
+    box-shadow: -0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.15);
+}
+
+.button.added {
+    width: 4.6rem;
+    pointer-events: none;
+    cursor: default;
+    padding: 1.6rem 1.4rem;
+}
+
+.button > img {
+    width: 2rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+}

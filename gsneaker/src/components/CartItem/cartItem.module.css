@@ -1,0 +1,215 @@
+.container.remove-effect {
+    -webkit-animation: fadeOut 0.7s cubic-bezier(0.79, 0.01, 0.22, 1) forwards;
+    animation: fadeOut 0.7s cubic-bezier(0.79, 0.01, 0.22, 1) forwards;
+}
+
+.container {
+    display: flex;
+    margin: 4rem 0rem;
+}
+
+.container:first-child {
+    margin-top: 2rem;
+}
+
+.image {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 100%;
+    margin-right: 3.4rem;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.active-effect .image {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation: imageZoom 0.5s cubic-bezier(0.79, 0.01, 0.22, 1) forwards;
+    animation: imageZoom 0.5s cubic-bezier(0.79, 0.01, 0.22, 1) forwards;
+}
+
+.image > img {
+    display: block;
+    width: 140%;
+    -webkit-transform: rotate(-28deg) translateY(-40px);
+    transform: rotate(-28deg) translateY(-40px);
+    -webkit-filter: drop-shadow(0rem 3rem 2rem rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0rem 3rem 2rem rgba(0, 0, 0, 0.2));
+}
+
+.information {
+    flex: 1;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    opacity: 1;
+}
+
+.active-effect .name {
+    opacity: 0;
+    -webkit-animation: textFade 0.6s cubic-bezier(0.79, 0.01, 0.22, 1) 0.7s forwards;
+    animation: textFade 0.6s cubic-bezier(0.79, 0.01, 0.22, 1) 0.7s forwards;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    opacity: 1;
+}
+
+.active-effect .price {
+    opacity: 0;
+    -webkit-animation: textFade 0.6s cubic-bezier(0.79, 0.01, 0.22, 1) 0.85s forwards;
+    animation: textFade 0.6s cubic-bezier(0.79, 0.01, 0.22, 1) 0.85s forwards;
+}
+
+.actions {
+    display: flex;
+    opacity: 1;
+}
+
+.active-effect .actions {
+    opacity: 0;
+    -webkit-animation: actionFade 0.4s cubic-bezier(0.79, 0.01, 0.22, 1) 1.1s forwards;
+    animation: actionFade 0.4s cubic-bezier(0.79, 0.01, 0.22, 1) 1.1s forwards;
+}
+
+.actionCount {
+    width: 100%;
+}
+
+.countNumber {
+    font-size: 1.4rem;
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    margin: 0rem 0.8rem;
+}
+
+.countButton,
+.removeButton {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 100%;
+    background-color: #eee;
+    font-weight: 700;
+    border: none;
+    transition: 0.2s all ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.countButton:hover {
+    background-color: #ddd;
+}
+
+.countButton > img,
+.removeButton > img {
+    display: block;
+    width: 32.2%;
+    margin: auto;
+}
+
+.removeButton {
+    background-color: var(--primary-color);
+}
+
+.removeButton:hover {
+    background-color: var(--primary-color-hover);
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.removeButton > img {
+    width: 57.2%;
+}
+
+@-webkit-keyframes imageZoom {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes imageZoom {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes textFade {
+    from {
+        -webkit-transform: translateX(3rem);
+        transform: translateX(3rem);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textFade {
+    from {
+        -webkit-transform: translateX(3rem);
+        transform: translateX(3rem);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes actionFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes actionFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    to {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}

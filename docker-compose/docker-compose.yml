@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    gsneaker-client:
+        build:
+            context: ../gsneaker
+        container_name: gsneaker-client
+        hostname: localhost
+        ports:
+            - "3000:3000"
+        volumes:
+            - ../gsneaker:/usr/src/app
+        environment:
+            FORCE_COLOR: 1
+            DEBUG_COLORS: "true"
+            TERM: xterm-256color
+            COLORTERM: truecolor

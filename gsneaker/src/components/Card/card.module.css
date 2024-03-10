@@ -1,0 +1,60 @@
+.container {
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 36rem;
+    height: 60rem;
+    box-shadow:
+        0 3.2px 2.2px rgba(0, 0, 0, 0.02),
+        0 7px 5.4px rgba(0, 0, 0, 0.028),
+        0 12.1px 10.1px rgba(0, 0, 0, 0.035),
+        0 19.8px 18.1px rgba(0, 0, 0, 0.042),
+        0 34.7px 33.8px rgba(0, 0, 0, 0.05),
+        0 81px 81px rgba(0, 0, 0, 0.07);
+    border-radius: 3rem;
+    overflow: hidden;
+    padding: 0rem 2.8rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    top: -20%;
+    left: -50%;
+    z-index: 0;
+}
+
+.top {
+    margin: 1.2rem 0rem;
+    position: relative;
+}
+
+.topLogo {
+    width: 5rem;
+    display: block;
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 1.6rem 0rem;
+    position: relative;
+}
+
+.body {
+    height: calc(100% - 9.8rem);
+    position: relative;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
