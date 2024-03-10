@@ -83,6 +83,6 @@ npm start
 
 # Deployment links:
 
-> -   GSneaker Client: [http://localhost:3000](http://localhost:3000)
+> -   GSneaker Client: [https://g-sneaker-code-test.vercel.app](https://g-sneaker-code-test.vercel.app/)
 
 **Thank for reviewing my project!**
