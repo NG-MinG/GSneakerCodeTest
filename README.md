@@ -47,7 +47,7 @@ cd docker-compose
 Window:
 
 ```bash
-docker compose -f up --build
+docker compose up --build
 ```
 
 Linux / MacOS:
